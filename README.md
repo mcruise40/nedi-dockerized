@@ -132,6 +132,22 @@ Restore by reversing the process (extract into a fresh named volume before start
 
 ---
 
+## Changelog
+
+### 0.1 (current)
+- Replace phpMyAdmin with Adminer (fastcgi) for database management
+- Add Adminer theme (`galkaev`)
+- Add automatic timezone configuration via `TZ` environment variable
+- Add cron daemon auto-start inside the NeDi container
+- Change syslog listener to internal port 1514 (mapped from host port 514)
+- Add automatic MAC vendor OUI database updates on container start
+- Move NeDi application files to a persistent Docker volume (`nedifiles`)
+- Add `nedi-monitor` and `nedi-syslog` init.d services
+- Switch from wget to curl for downloads
+- Add `Net::NTP` and other Perl module dependencies
+
+---
+
 ## Acknowledgements
 
 - [klinnex](https://github.com/klinnex) — original dockerized NeDi project this is based on
